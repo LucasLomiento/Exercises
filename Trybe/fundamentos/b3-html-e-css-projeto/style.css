@@ -1,0 +1,66 @@
+@import url('http://fonts.cdnfonts.com/css/d-din');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: D-DIN, sans-serif;
+}
+
+body {
+  background-color: rgb(253, 251, 251);
+  display: block;
+}
+
+main {
+  display: block;
+  padding: 1.5em;
+}
+
+#cabecalho {
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.151);
+  position: fixed;
+  padding: 1.5em;
+  width: 100%;
+  top: 0;
+  text-align: center;
+}
+
+#sobre_mim {
+  display: flex;
+  margin-top: 7em;
+  padding-bottom: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+#sobre_mim p {
+  color: black;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-right: 2.5%;
+  width: 500px;
+}
+
+#minha_foto {
+  width: 20%;
+  border-radius: 32%;
+}
+
+.hero_trybe {
+  color: rgb(47, 193, 140);
+  font-weight: 700;
+}
+
+article {
+  font-size: 2rem;
+  text-align: justify;
+  padding-bottom: 60px;
+}
+
+#listas {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 35%;
+  font-size: 1.5rem;
+}
