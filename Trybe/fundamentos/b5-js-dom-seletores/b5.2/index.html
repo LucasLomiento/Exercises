@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <script>
+       //1
+      let tagBody = document.querySelector('body');
+      let h1Tag = document.createElement('h1');
+      h1Tag.innerHTML = "oi mundo";
+      tagBody.appendChild(h1Tag)
+
+       //2
+      let tagMain = document.createElement('main');
+      tagBody.appendChild(tagMain).classList.add('main-content');
+
+       //3
+      let tagSection = document.createElement('section')
+      tagMain.appendChild(tagSection).classList.add('center-content')
+
+       //4
+      let tagP = document.createElement('p');
+      tagSection.appendChild(tagP)
+      tagP.innerText = 'algum texto aqui'
+
+       //5
+      let tagSectionLeft = document.createElement('section')
+      tagMain.appendChild(tagSectionLeft).classList.add('left-content')
+      
+       //6
+      let tagSectionRight = document.createElement('section')
+      tagMain.appendChild(tagSectionRight).classList.add('right-content')
+
+       //7
+      let tagImg = document.createElement('img')
+      tagImg.src = 'https://picsum.photos/200'
+      tagImg.classList.add('small-image')
+      tagSectionLeft.appendChild(tagImg)
+
+       //8
+      let tagUl = document.createElement('ul')
+      tagSectionRight.appendChild(tagUl)
+      
+      let numeroExtenso = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'novo', 'dez',]
+      for (let numero of numeroExtenso){
+        let tagLi = document.createElement('li')
+        tagLi.innerText = numero;
+        tagUl.appendChild(tagLi)
+      }
+
+       //9
+      for (let index = 1; index <= 3; index++){
+        let tagH3 = document.createElement('h3')
+        tagMain.appendChild(tagH3)
+      }
+      
+    </script>
+  </body>
+</html>
