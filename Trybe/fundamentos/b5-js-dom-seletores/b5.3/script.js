@@ -1,4 +1,7 @@
+
+
 function createDaysOfTheWeek() {
+
   const weekDays = [
     "Domingo",
     "Segunda",
@@ -17,6 +20,7 @@ function createDaysOfTheWeek() {
 
     weekDaysList.appendChild(dayListItem);
   }
+
 }
 
 createDaysOfTheWeek();
